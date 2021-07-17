@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="vertical"
+    android:id="@+id/llClickable"
+    android:background="@drawable/round_view"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#ffffff">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
+            android:background="?attr/selectableItemBackground"
+            android:paddingLeft="0dp"
+            android:paddingTop="12dp" android:paddingRight="8dp"
+            android:paddingBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView android:id="@+id/imgFileThumb" android:padding="8dp" android:layout_width="55dp" android:layout_height="55dp" android:src="@drawable/folder_view"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="0dp">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                    <TextView android:textSize="15dp" android:textColor="#020200" android:id="@+id/txtFileName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:text="Title" android:singleLine="true" android:fontFamily="@font/google_sans_regular"/>
+                    <TextView android:id="@+id/txtDivider" android:background="@color/colorPrimary" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="0.5dp" android:text="TextView"/>
+                    <TextView android:textSize="13dp" android:id="@+id/txtFileSize" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:text="Folder path" android:singleLine="true" android:fontFamily="@font/google_sans_regular"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:background="#ededed"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" android:text="TextView"/>
+</LinearLayout>

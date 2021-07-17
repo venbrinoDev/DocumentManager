@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/forgotDialog"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/imageContainer"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/round_view_dark"
+                        />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/zip_file"
+                        android:id="@+id/folderImage"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Storage.docs"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_toLeftOf="@id/cancleIcon"
+                    android:layout_toRightOf="@id/imageContainer"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/name"
+                    android:textSize="15dp"
+                    android:fontFamily="sans-serif-medium"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5dp"
+                    android:id="@+id/cancleIcon"
+                    android:src="@drawable/side_bar"
+                    android:layout_height="40dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/darker_gray"
+                android:layout_height="1dp"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name:"
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+                        android:id="@+id/fullNmae"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type of bookmarkFile:"
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+                        android:id="@+id/fileType"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Location:"
+                            android:layout_centerVertical="true"
+                            android:textAlignment="center"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="15dp"
+                            android:fontFamily="sans-serif-medium"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="c:..// path open bookmarkFile "
+                            android:layout_centerVertical="true"
+                            android:id="@+id/filePath"
+                            android:textAlignment="center"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="15dp"
+                            android:fontFamily="sans-serif-medium"/>
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Modified:"
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="june 2020 20"
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/modifiedFile"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Size:"
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="june 2020 20"
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/fileSize"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/cancleButton"
+                    android:layout_weight="1"
+                    android:text="Cancle"
+                    android:textColor="@color/colorAccent"
+                    android:background="@drawable/round_view_dark"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

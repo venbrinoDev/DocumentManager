@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_layout"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/bottom_sheet"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_peekHeight="30dp"
+    app:behavior_hideable="false"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/rotate"
+                android:layout_height="40dp"
+                android:src="@drawable/rotate"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rotate"
+                android:textSize="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/grey"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/goTo"
+                android:layout_height="40dp"
+                android:src="@drawable/go_to_page"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go To Page"
+                android:textSize="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtGotopPage"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/grey"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/share"
+                android:layout_height="40dp"
+                android:src="@drawable/share_buttom_bar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:textSize="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-light"
+
+                android:textColor="@color/grey"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--  Here is your content  -->
+
+</LinearLayout>

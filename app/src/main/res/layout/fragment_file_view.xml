@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/round_curveforbottom"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/headerLayout"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@id/heading"
+            >
+
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:id="@+id/flipper"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/drop_icon"
+                        android:popupBackground="@drawable/popbackground"
+                        android:spinnerMode="dropdown"
+                        fab:listitem="@layout/spinner_layout"
+                         />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="0dp"
+                        app:cardBackgroundColor="#2023232C"
+                        app:cardElevation="0dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <Button
+                                android:layout_width="30dp"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/backButton"
+                                android:layout_marginStart="5dp"
+
+                                android:background="@drawable/ic_back_arrow"
+                                android:layout_height="30dp" />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:id="@+id/searchBody"
+                                android:background="@android:color/transparent"
+                                android:layout_toEndOf="@id/backButton"
+                                android:textAlignment="textStart"
+                                android:maxLines="1"
+                                android:imeOptions="actionSearch"
+                                android:singleLine="true"
+                                android:lines="1"
+                                android:layout_toStartOf="@id/search_button"
+                                android:textColor="@android:color/black"
+                                android:hint="Search"
+                                android:layout_height="45dp"/>
+
+                            <Button
+                                android:layout_width="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/search_open"
+                                android:id="@+id/search_button"
+                                android:layout_height="30dp"
+
+                                />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+
+            </ViewFlipper>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/RecyclerBottomSheet"
+                 android:layout_below="@id/flipper"
+                android:layout_marginBottom="50dp"
+                android:layoutAnimation="@anim/recycler_animation"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/emptyFolder"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:layout_width="45dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:alpha="0.7"
+            android:src="@drawable/folder_view" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#434242"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            android:text="Empty Folder"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:id="@+id/progress"
+            android:visibility="visible"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/half_cut"
+        android:clickable="true"
+        android:layout_marginTop="10dp"
+        android:focusable="true"
+        android:visibility="gone" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end|bottom"
+        android:gravity="bottom"
+           android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/sizedesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_23"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/standard_23"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:background="@drawable/round_flaothing_view"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/SizeWisedesc"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:text="Size Wise desc"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSizeWiseDesc"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:maxImageSize="40dp"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/size_wise_desc"
+            app:fabSize="mini"/>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/sizeWiseAsec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginEnd="@dimen/standard_23"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/standard_23"
+            android:layout_gravity="bottom|end"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:background="@drawable/round_flaothing_view"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/textSizeWiseAsc"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:text="Size  with Ase"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/facSizeWiseAsce"
+                android:layout_width="wrap_content"
+                android:scaleType="centerCrop"
+                android:background="@android:color/transparent"
+                app:maxImageSize="40dp"
+                android:src="@drawable/size_wise_asc"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:fabSize="mini"
+                android:contentDescription="TODO" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/DateWiseDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginEnd="@dimen/standard_23"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/standard_23"
+            android:layout_gravity="bottom|end"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:background="@drawable/round_flaothing_view"
+                android:layout_height="wrap_content"
+                android:id="@+id/textDateWisedesc"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:text="Date Wise desc"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabDateWiseDesc"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:scaleType="centerCrop"
+                app:maxImageSize="40dp"
+                android:src="@drawable/datewisedesc"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+
+
+                app:fabSize="mini"
+                android:contentDescription="TODO" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/DateWiseAce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginEnd="@dimen/standard_23"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/standard_23"
+            android:layout_gravity="bottom|end"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:background="@drawable/round_flaothing_view"
+                android:layout_height="wrap_content"
+                android:id="@+id/textDateWiseAsce"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:text="Date Wise Ase"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabDateWiseAsce"
+                android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:maxImageSize="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/datewiseasc"
+
+                app:fabSize="mini"/>
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/nameWisedesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_marginEnd="@dimen/standard_23"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/standard_23"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:background="@drawable/round_flaothing_view"
+            android:layout_height="wrap_content"
+            android:id="@+id/textNameWisedesc"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:text="Name Wise desc"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabNameWisedesc"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:maxImageSize="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/namewisedesc"
+            app:fabSize="mini"
+            android:contentDescription="TODO" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/nameWiseAsce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_marginEnd="@dimen/standard_23"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/standard_23"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/textNameWiseAse"
+            android:background="@drawable/round_flaothing_view"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:text="Name Wise Asc"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabNameWiseAsec"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerCrop"
+
+            app:maxImageSize="40dp"
+            android:src="@drawable/namewiseasc"
+            app:fabSize="mini"
+            android:contentDescription="TODO" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:id="@+id/linearCentralFab"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_gravity="bottom|end">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/centeralFab"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/filter"
+            android:layout_marginStart="10dp"
+            app:maxImageSize="56dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+
+            app:borderWidth="0dp"
+            android:gravity="center_vertical"
+            android:scaleType="fitXY"
+            app:fabSize="normal"
+            android:contentDescription="TODO" />
+    </LinearLayout>
+    </LinearLayout>
+
+<include layout="@layout/banner_ads"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:padding="10dp"
+    android:elevation="10dp"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<ImageView
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:src="@drawable/popup_close"
+    android:layout_gravity="right"
+    android:layout_marginRight="10dp"
+    android:id="@+id/closedialog"
+    android:layout_marginTop="10dp"/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:src="@drawable/start_stic"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do You Like Our App?"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="17dp"
+        android:fontFamily="sans-serif-medium"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Give us a quick rating so we know\nif you like it"
+            android:textColor="#ffffff"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:numStars="5"
+                android:layout_margin="25dp"
+                android:layout_gravity="center_horizontal"
+                android:theme="@style/RatingBar"
+                android:id="@+id/rating"
+                android:layout_height="40dp"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

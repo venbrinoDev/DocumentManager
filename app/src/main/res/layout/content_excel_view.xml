@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/headerView"
+    android:background="@drawable/round_curveforbottom"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+  >
+
+    <LinearLayout
+        android:id="@+id/layoutads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtMessageAds"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="Advertisement"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/layoutads"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/RRjarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TabHost
+                android:background="@color/black"
+                android:id="@+id/sheets"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <HorizontalScrollView
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TabWidget
+                            android:background="@color/black"
+                            android:id="@android:id/tabs"
+                            style="@style/MyTabs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </HorizontalScrollView>
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </TabHost>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RRlibraryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/llmainframe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/mPageCountView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rounded_corner"
+                        android:gravity="right"
+                        android:padding="4dp"
+                        android:text="1/99"
+                        android:textColor="#020200"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RRloading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutads"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:text="Loading"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textSize="16dp"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loading"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="true"
+            android:padding="5dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16dp" android:textColor="#020200" android:gravity="center" android:id="@+id/txtfilename" android:padding="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Open As" android:singleLine="true"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/LLlayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/txtfilename" android:layout_alignParentStart="true">
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:id="@+id/LLtext" android:background="?attr/selectableItemBackground" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14dp" android:textColor="#020200" android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Text" android:singleLine="true"/>
+                        </LinearLayout>
+                        <TextView android:background="#ededed" android:layout_width="match_parent" android:layout_height="0.9dp" android:text="TextView" android:layout_marginStart="0dp"/>
+                        <LinearLayout android:id="@+id/LLaudio" android:background="?attr/selectableItemBackground" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14dp" android:textColor="#020200" android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Audio" android:singleLine="true"/>
+                        </LinearLayout>
+                        <TextView android:background="#ededed" android:layout_width="match_parent" android:layout_height="0.9dp" android:text="TextView" android:layout_marginStart="0dp"/>
+                        <LinearLayout android:id="@+id/LLvideo" android:background="?attr/selectableItemBackground" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14dp" android:textColor="#020200" android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Video" android:singleLine="true"/>
+                        </LinearLayout>
+                        <TextView android:background="#ededed" android:layout_width="match_parent" android:layout_height="0.9dp" android:text="TextView" android:layout_marginStart="0dp"/>
+                        <LinearLayout android:id="@+id/LLimage" android:background="?attr/selectableItemBackground" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14dp" android:textColor="#020200" android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Image" android:singleLine="true"/>
+                        </LinearLayout>
+                        <TextView android:background="#ededed" android:layout_width="match_parent" android:layout_height="0.9dp" android:text="TextView" android:layout_marginStart="0dp"/>
+                        <LinearLayout android:id="@+id/LLother" android:background="?attr/selectableItemBackground" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14dp" android:textColor="#020200" android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Other" android:singleLine="true"/>
+                        </LinearLayout>
+                        <TextView android:background="#ededed" android:layout_width="match_parent" android:layout_height="0.9dp" android:text="TextView" android:layout_marginStart="0dp"/>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

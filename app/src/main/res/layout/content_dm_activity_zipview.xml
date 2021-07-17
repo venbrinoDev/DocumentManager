@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/headerView"
+    android:background="@drawable/background_layout"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    >
+    <FrameLayout android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutads"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical"  android:id="@+id/layoutads"
+        android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+        <TextView android:textSize="12sp" android:gravity="center" android:id="@+id/txtMessageAds" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="50dp" android:text="Advertisement"/>
+    </LinearLayout>
+</RelativeLayout>

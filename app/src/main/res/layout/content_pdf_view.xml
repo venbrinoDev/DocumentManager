@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/headerView"
+    android:background="@drawable/background_layout"
+    android:layout_marginBottom="10dp"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    >
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutads">
+        <com.github.barteksc.pdfviewer.PDFView
+            android:layout_marginTop="20dp"
+            android:id="@+id/pdfView" android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textSize="16dp" android:id="@+id/loading" android:padding="5dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading" android:layout_centerInParent="true"/>
+        <ProgressBar android:id="@+id/progress_bar" android:padding="5dp" android:visibility="gone" android:layout_width="96dp" android:layout_height="wrap_content" android:indeterminate="true" android:layout_below="@+id/loading" android:layout_centerHorizontal="true" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical"  android:id="@+id/layoutads"
+        android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+        <TextView android:textSize="12dp" android:gravity="center" android:id="@+id/txtMessageAds" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="50dp" android:text="Advertisement"/>
+    </LinearLayout>
+</RelativeLayout>

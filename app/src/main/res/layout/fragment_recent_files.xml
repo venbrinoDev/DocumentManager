@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/round_curveforbottom"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@id/heading"
+            >
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/serchHeading"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="0dp"
+                        app:cardBackgroundColor="#2023232C"
+                        app:cardElevation="0dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:id="@+id/searchBody"
+                                android:background="@android:color/transparent"
+                                android:textAlignment="textStart"
+                                android:maxLines="1"
+                                android:paddingLeft="5dp"
+                                android:imeOptions="actionSearch"
+                                android:singleLine="true"
+                                android:lines="1"
+                                android:layout_toStartOf="@id/search_button"
+                                android:textColor="@android:color/black"
+                                android:hint="Search"
+                                android:layout_height="45dp"/>
+
+                            <Button
+                                android:layout_width="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/search_open"
+                                android:id="@+id/search_button"
+                                android:layout_height="30dp"
+
+                                />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/emptyFolder"
+                android:gravity="center"
+                android:layout_below="@id/serchHeading"
+                  android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView
+
+                    android:layout_width="45dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center"
+                    android:alpha="0.7"
+                    android:src="@drawable/folder_view" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#434242"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    android:text="Empty Folder"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@id/serchHeading"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/RecyclerBottomSheet"
+                    android:layoutAnimation="@anim/recycler_animation"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:id="@+id/progress"
+                android:visibility="gone"
+                android:layout_below="@id/serchHeading"
+
+android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+<include layout="@layout/banner_ads"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

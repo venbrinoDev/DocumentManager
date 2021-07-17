@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">Document Manager</string>
+
+    <string name="app_not_found">Please download suitable app to open this file</string>
+
+    <string name="generalapp">com.mobisystems.office</string>
+
+    <string name="okay">OPEN</string>
+
+    <string name="cancel">CANCEL</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="title_activity_dm__zipview">Word Office Reader</string>
+
+    <string name="title_activity_docxview">Word Office Reader</string>
+
+    <string name="title_activity_excel_view">Word Office Reader</string>
+
+    <string name="title_activity_pdfview">Word Office Reader</string>
+
+    <string name="title_activity_pptview">Word Office Reader</string>
+
+    <string name="title_activity_txt_view">Word Office Reader</string>
+
+    <!-- system -->
+
+
+    <string name="sys_button_ok">OK</string>
+
+    <string name="sys_button_cancel">Cancel</string>
+
+    <string name="sys_share_title">Sending mail...</string>
+
+    <!-- file list -->
+
+
+    <string name="file_toolsbar_copy">Copy</string>
+
+    <string name="file_toolsbar_share">Share</string>
+
+    <string name="file_toolsbar_mark_star">Mark</string>
+
+    <string name="file_toolsbar_unmark_star">UnMark</string>
+
+    <!-- application -->
+
+
+    <string name="app_toolsbar_hyperlink">Goto</string>
+
+    <string name="app_toolsbar_find">Find</string>
+
+    <string name="app_toolsbar_internet_search">Internet Search</string>
+
+    <string name="app_toolsbar_draw">Draw Mode</string>
+
+    <string name="app_toolsbar_back">Back</string>
+
+    <string name="app_toolsbar_pen">UnDraw</string>
+
+    <string name="app_toolsbar_pen_check">Draw</string>
+
+    <string name="app_toolsbar_eraser">UnErase</string>
+
+    <string name="app_toolsbar_eraser_check">Erase</string>
+
+    <string name="app_toolsbar_color">Pen Settings</string>
+
+    <string name="app_searchbar_backward">Find Backward</string>
+
+    <string name="app_searchbar_forward">Find Forward</string>
+
+    <string name="app_searchbar_find">Find</string>
+
+    <!-- word -->
+
+
+    <string name="wp_toolsbar_switch_view">Switch View</string>
+
+    <string name="wp_toolsbar_print_mode">Print Mode</string>
+
+    <!-- excel -->
+
+
+    <!-- ppt -->
+
+
+    <string name="pg_toolsbar_note">Note</string>
+
+    <string name="pg_slideshow">SlideShow</string>
+
+    <string name="pg_slideshow_pageup">Page Up</string>
+
+    <string name="pg_slideshow_pagedown">Page Down</string>
+
+    <!-- 对话框 -->
+
+
+    <string name="sys_url_arcsoft">http://www.arcsoft.com</string>
+    <string name="rar_reader">Rar Reader</string>
+
+
+    <array name="menuOptions">
+        <item>Home</item>
+        <item>Folder View</item>
+        <item>File View</item>
+        <item>File Manager</item>
+        <item>Recent Files</item>
+        <item>Bookmark</item>
+        <item>Settings</item>
+        <item>Share App</item>
+        <item>Rate App</item>
+    </array>
+    <!-- Strings used for fragments for navigation -->
+
+</resources>

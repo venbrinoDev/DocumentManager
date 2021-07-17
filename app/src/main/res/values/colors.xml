@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#23232C</color>
+    <color name="colorPrimaryDark">#23232C</color>
+    <color name="colorAccent">#ffffff</color>
+
+    <color name="primaryTitleNight">#23232C</color>
+
+
+    <color name="grey">#DDDADA</color>
+    <color name="black">#000000</color>
+    <color name="red">#E4281A</color>
+    <color name="green">#28D52F</color>
+    <color name="orange">#D35832</color>
+    <color name="grey_300">#979797</color>
+
+
+    <color name="back">#ffffff</color>
+
+    <color name="rippel">#cccccc</color>
+
+
+
+</resources>
