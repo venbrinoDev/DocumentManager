@@ -11,9 +11,10 @@ An app that brings all document in your phone in one place .
 
 <h2 align="left">Screenshots</h2>
 <h4 align="center">
-<img src="images/social_one.png" width="30%" vspace="10" hspace="10">
-<img src="images/socail_three.png" width="30%" vspace="10" hspace="10">
-<img src="images/social_four.png" width="30%" vspace="10" hspace="10">
+<img src="images/doc_three.png" width="30%" vspace="10" hspace="10">
+<img src="images/doc_four.png" width="30%" vspace="10" hspace="10">
+ <img src="images/doc_one.png" width="30%" vspace="10" hspace="10">
 <br>
-<img src="images/social_five.png" width="30%" vspace="10" hspace="10">
-<img src="images/socail_two.png" width="30%" vspace="10" hspace="10">
+<img src="images/doc_five.png" width="30%" vspace="10" hspace="10">
+<img src="images/doc_two.png" width="30%" vspace="10" hspace="10">
+<img src="images/doc_six.png" width="30%" vspace="10" hspace="10">
